@@ -1,0 +1,23 @@
+###local
+@api =http://localhost/constructora2/public/api
+###zuna
+###@api =http://zuna.esy.es/public
+
+###token
+@token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTE0OTM3M2Y4YTVkZjZhMzdjMjNiMTgyOTU0ZmY1NzI2NjJmYzVhMjI0NTdjMzg0YmQwNGQzMjZjYzcwZmNkZTIxMjdiZjgzMDQyMzUzMTQiLCJpYXQiOjE2MjM1MzIyMjAuOTg5MTc3LCJuYmYiOjE2MjM1MzIyMjAuOTg5MTkzLCJleHAiOjE2NTUwNjgyMjAuODg2Njg4LCJzdWIiOiIxMDkxIiwic2NvcGVzIjpbXX0.nYpn0iYOiP1-Ih4_lDfv1KGd6IuH31IAeFjBcuhASWgMUYvo8fQhrFGZyNgfOTPz_rvNfitTQFIdsr1w4LmeDmEAKD1jQzqMiMhBYhABI7iZVnwMLtoCqYViLyCGwCw6B5W9Ajch2-pdphk2uvwcDmAYN_SvYwnxi7FaOr9I0TJaRfZqEiQJsT1T4npD09z5w-w7Ejr7U2MvBDogtXcHXgBqPJVFFSIU6aZmI117ov_nNN18i9QBVthk_rVdCs9LcAV5AjEifZh9SiSlqWYcUMYgOKmIYcYD7y2ekHrOKXKVhVKFphQR0pGQ7OcoPOA0gW1wcp9Xqgjrx-Dby94PbmtlGeY8jwiqp3JMnRms9HtAHfi5MzqLKqsX_0-fLlWCnPPiPqHypzqJSsafP_zHbVFtbCCfg03cv1n54uq9rXfWBYoNseCJv9HNiWYspb9UqFx6vyegCpz6JD2BcpEnBzVEkNc6e1AeYUl_810CC3GiMyFY2Ek126knY29ULc8oOdA7uWnUj6nX6U3Q8IYQR6tIgr0lfTpkIKM4qy5jQ1ofpM25bE23PRihCvANFZ-IiEvXtP_vbt_gOTxYQghgt90OqoBjklFQyPLKV53eOA-kwy3E_QSjzkWAtuLWdomRxv31ZpZ5xjrtb-5COSD3GE--vkuKvlr2XZKE3Js2rfo
+### list actividades
+POST    {{api}}/db-app
+Content-Type: application/json
+X-Requested-With:XMLHttpRequest
+
+{
+    "fecha":"2021-09-15 03:41:39"
+}
+
+
+
+###database
+
+GET {{api}}/db-app
+Content-Type: application/json
+X-Requested-With:XMLHttpRequest

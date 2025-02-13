@@ -1,0 +1,26 @@
+.ui-datepicker-month-btn,
+.ui-datepicker-year-btn {
+  cursor: pointer;
+}
+
+.ui-datepicker-month-btn {
+  margin-right: 0.25em;
+}
+
+.ui-datepicker-month-calendar tr td {
+  height: 59px;
+}
+
+.circle.btn {
+  border-radius: 50%;
+  background-color: #eee;
+  text-align: center;
+  width: 50px;
+  height: 32px;
+  padding-top: 18px;
+  cursor: pointer;
+}
+
+.circle.btn.selected {
+  background-color: #ccc;
+}

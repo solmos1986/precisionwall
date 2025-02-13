@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Sat, 12 Jun 2021 20:16:05 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+X-Powered-By: PHP/8.0.3
+Cache-Control: no-cache, private
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59
+Content-Length: 2093
+Connection: close
+Content-Type: application/json
+
+{"Empleado_ID":1091,"Emp_ID":6,"Nombre":"Hector","Apellido_Paterno":"Fuentes","Apellido_Materno":"","Nick_Name":"DC Hector","Estado":"","Ciudad":"","Zip_Code":"","Calle":"","Numero":"938","Cargo":"Lead-Foreman (L3)","Numero_Seguro_Social":"","Fecha_Nacimiento":"2017-11-01","Numero_Licencia_Conducir":"","Numero_Permiso_Trabajo":"","Fecha_Expiracion_Trabajo":"2017-10-31","Numero_Residente":"","email":"josecastro5033@gmail.com","Telefono":"","Celular":"202-270-7706","Aux1":"","Aux2":" \/Hrs.2 from:05-11-2020 to:05-27-2021\/Updated:05-27-2021","Aux3":"","Aux4":"","Aux5":"F","Usuario":"hector","P1":"Type the number twice-> 1","R1":"11","P2":"Type the number twice-> 2","R2":"22","P3":"Type the number twice-> 3","R3":"33","Indice_produccion":"1.00","Nro_Bono":"OctNovDec\/2020","Spec_Bon1":"300.00","Not_Bon":"Because you are traying hard to be a team player","Extra_Mon1":"27.69","Benefit1":"$27.69Gas per week non wage jobs","Extra_Mon2":"0","Benefit2":"1 week vacation plus 3 hollydays (NY,Chr.,TG)","empresa":"","Rol_ID":"[1]","Last_Hire_Date":"2017-10-31","status":"ok","message":"welcome","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzI5MTRmZTk0MjBjNmZhNGJiMTllZDk4OTZlMTVlMDE2ZDUyMTBhYzc0ZGU0NTFjODAwYWNhYzE0ZjBiNzRlNGJmZDMwZTE5OWQ3MjBkNjgiLCJpYXQiOjE2MjM1Mjg5NjYuMzc2NDg4LCJuYmYiOjE2MjM1Mjg5NjYuMzc2NDk0LCJleHAiOjE2NTUwNjQ5NjYuMzI4ODIzLCJzdWIiOiIxMDkxIiwic2NvcGVzIjpbXX0.LWYrviZtcAvy4Oz6FKcSBS0p4PjLpWCMrbS53eJ43he7YLTHBKUFbM7gDj9CgxCzVTT0hQhoW0zXO569s092Oxs7gdI3CyP6w2a-ACSII-ihIhq8tImrfjoy_uGOT-6UC5Dr8WhRgMH4_TqzriPrbjutu4sO2qG2ei3G4nCwjtN5mudzurRqy7e1RXmr-GQc1knpbMeaiMR0v9FFbZ33yd_ZU_BguKVlTCRQ1EjbCOEUXUOvLJNZMH-oguGwkqYCjwhhLSc1II_-U03TOzdJpqke7yrjeKp-S1UgIuEiKT5b_IS4Od4JowguVeVlAnk159D-zAeTK7mru2NKTeCwBdvj2c_n2isfgwHOapxVU5opz5Z-pUmrqfhnQeMTttslyYZbtZNTZlxDns0pQz0GdsQbKB70Y8Bu3i16by6HeXNtiknXNFhtIsdFPFPg3Xzwm6p7JP6bEKq_IctmVqKnN0umjQReIsVQEXeo_q0wlIEKrZGoAo7z445aXOwmgzKWUKgjX2-tkkEedBBeuln3pX5fEQKFMjrp7ZR_yY-3rsq2OAwS-onirHC1az_pKVrH-78hHfXuyP8BARCo07SlHDXjHMyDEbUhVC_fZNTZ7uhZXeonklrc_ObOHbIoqNIRyZEP6qenrz6G2FM8cnUuZyC-ICMKGyYkgyoair5kzMM"}

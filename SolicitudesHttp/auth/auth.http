@@ -1,0 +1,27 @@
+###local
+###@api =http://localhost/constructora2/public
+###zuna
+@api =http://zuna.esy.es/public
+
+###token
+@token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzFkYTczYWE0ZDQ5YWE4MDEwZjY2NDYxZjJiYWE5M2Y4MGViZjNhZWNlMTM4ZTZhMDI0NTQ5MDYzZDZkOTM5YmNjNWRjZGE3ZTc1YWUzNjkiLCJpYXQiOjE2MjU4NzE0NzQsIm5iZiI6MTYyNTg3MTQ3NCwiZXhwIjoxNjU3NDA3NDc0LCJzdWIiOiIxMDkxIiwic2NvcGVzIjpbXX0.p2k0GHHgkjDcmXVRo8DL7rwei9xXI7WJdgRAwQkWLeZLYDa0EH6nl8BsjJhkpqBhtGq0ihkGFvmPP3ibX325KDLJ2eFmG2qe2uEvcgmW5zal1GJrw3sicWIJm8dnS5648vZYjwmZd8jSPDZEB07m4CUGyhtf43nkkBqgkA8nnpqBSC_s6JtaCSmw_jsNY46SyBwHxzQ1WdnE-krXrhq7ibRlC2n1CvippIXO3o2CZvwOu8nfhL5w3mrIVFjbXynZv299l_xLrCLZBjYo6b9J05kawXsdnz2NsORtcOghz4LwQ-Mzdum8cxNkft88dYqtrx9NpnUK2LUFolpTTxP0VEp2jyxlVe3t8Y_fgWiJ8wBoTeI2uUOx92MbeR0P3eSslbZdy1C2gyCCy2HKVuK1Jo9VTiIlDnBrSaIfI8tyhJbAG168PPCrbmi1iwYXvHzxDu81xGsQZSDe9e82-jD0w1cObkoGMObaihHlSPGb0Q38s3JYmrzlL6TG-Lkj4-4lPACO8XEqF4RSTTiRrGkHYykPrFc-k2ki6DujmbwMM6CaGgMTuxf0KEEpggnhHIK0WQMMReAqgc6cOPO--kvw75QG4jwb7zBFhVEdHzHNd4vme5Q4ke8Q8d-6lM6qgPHBRvKotrMZnJ_ydfxUHAUpGeGNLiBbAFUsIsnUps-CC_0
+### login
+POST  {{api}}/api/login
+Content-Type: application/json
+X-Requested-With:XMLHttpRequest
+
+{
+    "username":"hector",
+    "password":"hector"
+}
+### logout
+POST  {{api}}/api/logout
+Content-Type: application/json
+X-Requested-With:XMLHttpRequest
+Authorization: Bearer {{token}}
+
+### user
+ GET {{api}}/api/user
+Content-Type: application/json
+X-Requested-With:XMLHttpRequest
+Authorization: Bearer {{token}}

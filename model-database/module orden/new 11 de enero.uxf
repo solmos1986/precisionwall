@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>30</y>
+      <w>170</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>tipo_orden
+--
+id
+proyecto_id
+num
+nota
+estatus_id
+nombre_trabajo
+estado
+fecha_order
+fecha_entrega
+estado
+creado_por</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>330</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>tipo_orden_materiales
+--
+id
+material_id
+tipo_orden_id
+cant_ordenada
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>230</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..1
+tiene</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>0</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>estatus
+--
+id
+nombre</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>10</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..1
+tiene</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>640</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>tipo_movimiento_materiales_pedido
+--
+id
+Ped_Mat_ID
+fecha_resgitro
+fecha_espera
+cantidad
+material_id
+Pro_id_ubicacion
+nota
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>680</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..1
+registra</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>120</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..1
+tiene</panel_attributes>
+    <additional_attributes>140.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>420</y>
+      <w>70</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..1
+pertenece</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>510</y>
+      <w>180</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>materiales
+--
+Mat_ID
+Pro_ID
+Ven_ID
+Cat_ID
+Denominacion
+Nombre_Generico
+Area_donde_va
+Unidad_Medida
+Cantidad
+Precio_Unitario
+Precio
+Fecha_Registro
+Fecha_Envio
+Fecha_Recibido</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>630</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>pedidos_material
+--
+Ped_Mat_ID
+Ped_ID
+Mat_ID  
+Task_ID
+Actividad_ID
+Cantidad
+Cantidad_Recibida
+Cantidad_Usada
+Aux1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>450</y>
+      <w>150</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..n
+tiene</panel_attributes>
+    <additional_attributes>10.0;140.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>520</y>
+      <w>190</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>170.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>270</y>
+      <w>150</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>pedidos
+--
+Ped_ID
+Pro_ID
+Ven_ID  
+Fecha
+OperatorID
+Note
+PO
+PO_Corr
+tipo_orden_id
+status_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>150</y>
+      <w>180</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>tipo_tranferencia_envio
+--
+id
+sub_empleoye_id
+fecha_actividad
+almacen_id
+estatus_id
+nota
+firma_entrega
+firma_foreman
+fecha_entrega
+fecha_foreman
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>230</y>
+      <w>220</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..0
+tiene</panel_attributes>
+    <additional_attributes>10.0;90.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>440</y>
+      <w>270</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>tipo_movimiento_pedido
+--
+id
+Ped_Mat_ID
+fecha_resgitro
+fecha_espera
+cantidad
+material_id
+Pro_id_ubicacion
+nota
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>380</y>
+      <w>150</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..0
+tiene</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;130.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resize & Compress Images On Client Side Example</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/darkly/bootstrap.min.css">
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/other/resize-compress-image-client-side.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container" style="margin:150px auto">
+    <h1>Resize & Compress Images On Client Side Example</h1>
+    <p class="lead">A jQuery plugin that resizes and compresses images on the client side and returns a Base64 string for further use.</p>
+    <div class="card">
+        <div class="card-header p-2 bg-info">
+            <input id="file" type="file" />
+        </div>
+        <div class="card-img p-3">
+            <div class="input-group mb-3" style="max-width:450px;">
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Mode: </label>
+                </div>
+                <select class="custom-select" id="mode"><option>Width</option><option>Ratio</option><option>Weight</option></select>
+                <div>
+                    <select class="custom-select rounded-0" id="mode_0"><option value="800">800px</option><option value="600" selected>600px</option><option value="400">400px</option></select>
+                    <select class="custom-select rounded-0 d-none" id="mode_1"><option value="1">Original</option><option value="0.5" selected>1/2</option><option value="0.25">1/4</option><option value="0.125">1/8</option></select>
+                    <select class="custom-select rounded-0 d-none" id="mode_2"><option value="100">100KB</option><option value="200" selected>200KB</option><option value="500">500KB</option></select>
+                </div>
+                <div class="input-group-append">
+                    <select class="custom-select rounded-0" id="format"><option>JPG-10</option><option selected>JPG-8</option><option>JPG-6</option><option>PNG (No Compression)</option></select>
+                </div>
+            </div>
+            <textarea class="custom-select w-100 d-none" id="img_data"></textarea>
+            <div class="row mx-auto my-3 text-center" style="overflow-x:auto;">
+                <img id="showImg" src="" />
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="application/javascript" src="jquery.resizeImg.js"></script>
+<script type="application/javascript" src="mobileBUGFix.mini.js"></script>
+<script type="application/javascript">
+    $("#file").resizeImg(function(){
+        let type, quality;
+        switch ($("#format").get(0).selectedIndex) {
+            case 0:
+                type = "image/jpeg";
+                quality = 1;
+                break;
+            case 1:
+                type = "image/jpeg";
+                quality = 0.8;
+                break;
+            case 2:
+                type = "image/jpeg";
+                quality = 0.6;
+                break;
+            case 3:
+                type = "image/png";
+                quality = 1;
+                break;
+            default:
+                type = "image/jpeg";
+                quality = 0.8;
+        }
+        return {
+            use_reader: false,
+            mode: $("#mode").get(0).selectedIndex,
+            val: $("#mode_"+$("#mode").get(0).selectedIndex).val(),
+            type: type,
+            quality: quality,
+            callback: function(result) {
+                $("#showImg").attr('src', result);
+                $("#img_data").removeClass("d-none").val(result.substr(result.indexOf(',') + 1 )).css("height",100);
+                console.log($("#img_data").val().length);
+            }
+        };
+    });
+
+    $("select").change(function() {
+        $("#file").trigger("change");
+    });
+
+    $("#mode").change(function(){
+        $(this).next().find("select").addClass("d-none");
+        $("#mode_"+this.selectedIndex).removeClass("d-none");
+    });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</html>
