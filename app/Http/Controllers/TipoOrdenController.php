@@ -653,7 +653,7 @@ class TipoOrdenController extends Controller
             })
             ->addColumn('acciones', function ($data) {
                 $button = "
-                <i class='fas fa-eye ms-text-primary cursor-pointer view_movimiento_material' data-id='$data->Ped_Mat_ID' title='View email'></i>
+                <i class='fas fa-pencil-alt ms-text-warning cursor-pointer view_movimiento_material' data-id='$data->Ped_Mat_ID' title='View email'></i>
                 ";
                 return $button;
             })
