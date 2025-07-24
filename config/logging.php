@@ -43,8 +43,9 @@ return [
 
         'single' => [
             'driver' => 'single',
-            'path' => storage_path('logs/laravel.log'),
+            'path' => storage_path('logs/' . date('Y') . '/' . date('F') . '/' . date('d') . '.log'),
             'level' => 'debug',
+            'replace_placeholders' => true,
         ],
 
         'daily' => [

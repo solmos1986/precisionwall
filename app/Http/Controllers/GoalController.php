@@ -8,6 +8,7 @@ use DataTables;
 use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Image;
 use Mail;
 use PDF;
@@ -43,18 +44,18 @@ class GoalController extends Controller
                 'empresas.Nombre as nombre_empresa',
                 'personal.Usuario as username'
             )
-            //filtrando por fecha
+                //filtrando por fecha
                 ->when(!empty(request()->from_date), function ($q) {
                     $from = date('Y-m-d', strtotime(request()->from_date));
                     $to = date('Y-m-d', strtotime(request()->to_date));
                     return $q->whereBetween('informe_proyecto.fecha', [$from, $to]);
                 })
-            //filtrando si hay proyectos
+                //filtrando si hay proyectos
                 ->when(!empty(request()->proyecto), function ($q) {
                     //dd('proyecto');
                     return $q->where('proyectos.Nombre', 'like', '%' . request()->proyecto . '%');
                 })
-            //filtrando por codigo visit report
+                //filtrando por codigo visit report
                 ->when(!empty($request->query('codigo')), function ($q) use ($request) {
                     //dd('codigo');
                     return $q->where('informe_proyecto.Codigo', 'like', '%' . $request->query('codigo') . '%');
@@ -615,6 +616,7 @@ class GoalController extends Controller
 
     public function getActividad($proyecto_id, $fecha)
     {
+        Log::info('GoalController/getActividad ' . json_encode($proyecto_id, JSON_PRETTY_PRINT));
         $actividades = DB::table('registro_diario')
             ->select(
                 DB::raw("'update' as 'estado'"),
@@ -653,10 +655,10 @@ class GoalController extends Controller
             ->leftJoin('proyectos', 'proyectos.Pro_ID', 'actividades.Pro_ID')
             ->where(DB::raw('substring(proyectos.Codigo, 1, 3)'), '<', 900)
             ->where('task.Nombre', 'like', '%super%')
-        //->where('registro_diario.Fecha', date("Y-m-d", strtotime($fecha)))
+            //->where('registro_diario.Fecha', date("Y-m-d", strtotime($fecha)))
             ->where('registro_diario.Pro_ID', $proyecto_id)
-        //filtro verificar si es admin
-        //->where('registro_diario.Empleado_ID', auth()->user()->Empleado_ID)
+            //filtro verificar si es admin
+            //->where('registro_diario.Empleado_ID', auth()->user()->Empleado_ID)
             ->when(!auth()->user()->verificarRol([1]) && !auth()->user()->verificarRol([10]), function ($query) {
                 return $query->where('registro_diario.Empleado_ID', auth()->user()->Empleado_ID);
             })
@@ -1041,10 +1043,10 @@ class GoalController extends Controller
             'goal_solucion.id as goal_solucion_id',
             'goal_solucion.descripcion as descripcion_solucion'
         )
-        //->where('goal_solucion.estado', 1)
+            //->where('goal_solucion.estado', 1)
             ->leftJoin('goal_consecuencia', 'goal_consecuencia.goal_problem_id', '=', 'goal_problem.id')
 
-        /* ->where('goal_problem.estado', 1)
+            /* ->where('goal_problem.estado', 1)
         ->where('goal_consecuencia.estado', 1) */
             ->leftJoin('goal_solucion', 'goal_solucion.goal_consecuencia_id', 'goal_consecuencia.id')
             ->get();

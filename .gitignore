@@ -23,3 +23,4 @@ yarn-error.log
 .well-known/*
 /storage/framework/laravel-excel/*
 app_new.rar
+.user.ini
